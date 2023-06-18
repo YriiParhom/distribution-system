@@ -21,6 +21,7 @@ public class User {
     private String login;
     @Length(min = 5, max = 25)
     private String password;
+    // TODO: 18.06.2023 Лучше юзать енам (если состав ролей статичен). Вряд ли ты предполагаешь здесь рандомную строку
     private String role;
     @Length(min = 2)
     private String name;
