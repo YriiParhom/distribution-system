@@ -5,8 +5,7 @@ spring:
     password: postgres
     driver-class-name: org.postgresql.Driver
   jpa:
-    hibernate:
-      ddl-auto: create-drop #todo не стоит использовать автогенераию хибернейта
+      #todo не стоит использовать автогенераию хибернейта
     show-sql: true
     properties:
       hibernate:
