@@ -18,6 +18,7 @@ public class Room {
 
     private int number;
 
+    // TODO: 22.06.2023 я рекомендую завести привычку явно указывать поле для маппинга
     @ManyToOne
     private Dormitory dormitory;
 

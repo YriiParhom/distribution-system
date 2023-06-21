@@ -24,7 +24,7 @@ public class Student {
     private String surname;
 
     private String gender;
-    @ManyToOne
+    @ManyToOne //todo: потерял пустую строку:)
     private University university;
 
     @ManyToOne
