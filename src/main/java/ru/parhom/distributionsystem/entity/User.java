@@ -2,10 +2,12 @@ package ru.parhom.distributionsystem.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 
 @Entity
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "\"user\"")
@@ -19,6 +21,8 @@ public class User {
 
     private String password;
 
+    @ManyToOne
+    @JoinColumn(name = "role_id")
     private Role role;
 
     private String name;

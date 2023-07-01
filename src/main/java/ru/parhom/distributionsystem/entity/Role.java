@@ -1,6 +1,23 @@
 package ru.parhom.distributionsystem.entity;
 
-public enum Role {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 
-    DORMITORY_ADMIN, UNIVERSITY_ADMIN, CHIEF_ADMIN, MASTER_ADMIN
+@Entity
+@AllArgsConstructor
+@NoArgsConstructor
+public class Role {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+
+    private String description;
 }
