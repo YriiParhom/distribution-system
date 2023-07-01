@@ -21,10 +21,10 @@ public class University {
     private int duration;
 
     @OneToMany
-    @JoinColumn(name = "fk_university")
+    @JoinColumn(name = "university_id")
     private Set<Dormitory> dormitories = new HashSet<>();
 
     @OneToMany
-    @JoinColumn(name = "fk_university")
+    @JoinColumn(name = "university_id")
     private Set<Student> students = new HashSet<>();
 }

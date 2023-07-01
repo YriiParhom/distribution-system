@@ -18,8 +18,9 @@ public class Room {
 
     private int number;
 
-    // TODO: 22.06.2023 я рекомендую завести привычку явно указывать поле для маппинга
+
     @ManyToOne
+    @JoinColumn(name = "room_id")
     private Dormitory dormitory;
 
     private int capacity;
@@ -29,6 +30,6 @@ public class Room {
     private String gender;
 
     @OneToMany
-    @JoinColumn(name = "fk_room")
+    @JoinColumn(name = "room_id")
     private Set<Student> students = new HashSet<>();
 }
