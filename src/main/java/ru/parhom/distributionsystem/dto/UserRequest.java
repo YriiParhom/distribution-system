@@ -22,7 +22,7 @@ public class UserRequest {
     @Size(min = 5, message = "Password have to consists of at least 5 symbols")
     private String password;
 
-    private Role role;
+    private Long roleId;
 
     @NotBlank(message = "Name required")
     @Size(min = 2, message = "Name have to consists of at least 2 symbols")
